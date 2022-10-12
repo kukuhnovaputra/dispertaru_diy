@@ -1,3 +1,11 @@
+/*
+Name: Dispertaru DIY
+Author: Kukuh Nova Putra
+URI: https://kukuh.one
+Version: 1.0
+*/
+
+/* Typeface */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 /* Reset
@@ -22,11 +30,14 @@ html>body .full {
 
 /* Custom Color
 --------------------------------------------- */
+.blog,
 .bg-green {
    background-color: #035424;
 }
 
-.bg-yellow {
+.bg-yellow,
+.timeline,
+.slider-info {
    background-color: #FFF3D1;
 }
 
@@ -78,20 +89,28 @@ section {
 
 /* Hero
 --------------------------------------------- */
-.hero {
-   background-image: url("../images/hero-mobile.png");
+.hero,
+.hero-info {
    height: 100%;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   background-color: #035424;
+}
+
+.hero {
+   background-image: url("../images/hero-mobile.png");
+}
+
+.hero-info {
+   background-image: linear-gradient(rgba(3,84,36,.8), rgba(3,84,36,.8)), url("../images/hero-info.jpeg");
 }
 
 @media (max-width: 991px) {
    .hero-text {
       margin-top: -5rem !important;
    }
-   .hero-text h1 {
+   .hero-text h1,
+   .hero-info-text h1, {
       font-size: 2.5rem;
    }
 }
@@ -99,17 +118,13 @@ section {
 @media (min-width: 992px) { 
    .hero {
       background-image: url("../images/hero.png");
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: #035424;
    }
 }
 
 /* Merge Style
 --------------------------------------------- */
 .hero h1,
+.hero-info h1,
 .text-counter {
    font-weight: 700;
 }
@@ -119,7 +134,8 @@ section {
    font-weight: 500;
 }
 
-.timeline {
+.timeline,
+.slider-info {
    background-color: #FFF3D1;
 }
 
@@ -267,10 +283,103 @@ footer p {
 .text-counter {
    font-size: 2.5rem;
 }
-
-.spacer {
+.spacer,
+.spacer-green {
    width: 60px;
    height: 0;
-   border: 2px solid #FFF3D1;
    display: inline-block;
+}
+
+.spacer {
+   border: 2px solid #FFF3D1;
+}
+
+.spacer-green {
+   border: 2px solid #035424;
+}
+
+/* Customize Carousel
+-------------------------------------------------- */
+
+.carousel-control-next,
+.carousel-control-prev {
+   width: auto;
+}
+
+.slider-items {
+   margin: 0 3rem;
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators [data-bs-target] {
+   width: 10px;
+   height: 10px;
+   border-radius: 100%;
+   background-color: #035424;
+}
+
+.carousel-indicators {
+   bottom: -50px;
+}
+
+.carousel-item {
+  height: 32rem;
+}
+
+/* Blog Divider
+-------------------------------------------------- */
+.blog h2 {
+   margin-bottom: 5rem;
+}
+
+.blog-post {
+   padding: 3rem 0;
+   border-top: .5px solid #FFF3D1;
+}
+
+.blog-navigation {
+   border-top: .5px solid #FFF3D1;
+   padding-top: 3rem;
+}
+
+/* Customize Pagination
+-------------------------------------------------- */
+.pagination li {
+   margin: 0 .7rem;
+}
+
+.pagination li a {
+   color: #FFF3D1;
+}
+
+.pagination li.page-item a:hover,
+.pagination li.page-item a:active,
+.pagination li.page-item a:focus {
+   background-color: #FFF3D1;
+   color: #035424;
+   border-radius: 5px;
+}
+
+.page-item:last-child .page-link,
+.page-item:first-child .page-link {
+   border-radius: 0;
+}
+
+.pagination li.page-item a {
+   background: transparent;
+   border: none;
+}
+
+.pagination li.page-item a.active {
+   border-radius: 5px;
+   background-color: #FFF3D1;
+   color: #035424;
+   font-weight: 600;
 }
