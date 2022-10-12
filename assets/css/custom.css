@@ -255,6 +255,20 @@ img.rounded,
    }
 }
 
+@media (max-width: 375px) {
+   .card-img-overlay,
+   img.rounded,
+   .overlay-text {
+      width: 125px;
+      height: 125px;
+   }
+
+   .caption,
+   .card-body a {
+      font-size: 12px;
+   }
+}
+
 @media (min-width: 320px) { 
    p.caption,
    a.caption {
