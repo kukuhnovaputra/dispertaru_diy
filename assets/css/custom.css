@@ -186,6 +186,31 @@ section {
    }
 }
 
+/* Navigation tweak for informasi page */
+.navbar-custom.scrolledd {
+   color: #FFF3D1 !important;
+   background: #035424 !important;
+}
+
+.navbar-custom.scrolledd a {
+   color: #FFF3D1 !important;
+}
+
+@media (max-width: 1200px) { 
+   .navbar-custom.scrolledd {
+      color: #FFF3D1 !important;
+      background: #035424 !important;
+   }
+
+   .navbar-custom.scrolledd a {
+      color: #035424 !important;
+   }
+
+   .navbar-custom.scrolledd a.navbar-brand {
+      color: #FFF3D1 !important;
+   }
+}
+
 /* Logo
 --------------------------------------------- */
 .card {
